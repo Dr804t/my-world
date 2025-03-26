@@ -7,14 +7,14 @@ import Footer from "./components/Footer";
 function App() {
     return (
       <Router>
-        <div className="h-full w-full ">
+        <div className="h-full w-full flex flex-col">
           <Header />
-          <div className="flex-grow">
+          <main className="flex-grow pt-24"> {/* Add padding to offset the header */}
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
             </Routes>
-          </div>
+          </main>
           <Footer />
         </div>
       </Router>

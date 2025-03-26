@@ -1,4 +1,4 @@
-import React from "react";
+
 
 function Home() {
   const skills: string[] = [

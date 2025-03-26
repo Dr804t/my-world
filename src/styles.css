@@ -16,7 +16,13 @@ html,
 body {
   height: 100%;
   background-color: #171825;
+  overflow-y: scroll; /* Allows scrolling without showing the scrollbar */
+  scrollbar-width: none; 
 }
+
+body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+  }
 
 @layer utilities {
     .hover-animation {
