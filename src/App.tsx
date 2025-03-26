@@ -1,10 +1,24 @@
-function App() {
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-500">Hello, Tailwind!</h1>
-      <p className="mt-4 text-lg text-gray-700">Your Tailwind setup is working!</p>
-    </div>
-  )
-}
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import About from "./page/about";
+import Home from "./page/Home";
+import Footer from "./components/Footer";
 
-export default App
+function App() {
+    return (
+      <Router>
+        <div className="h-full w-full ">
+          <Header />
+          <div className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </div>
+          <Footer />
+        </div>
+      </Router>
+    );
+  }
+  
+  export default App;
